@@ -1,0 +1,5 @@
+APP_STL := system
+APP_ABI := arm64-v8a
+APP_PLATFORM := latest
+NDK_PROJECT_PATH := $(LOCAL_PATH)
+APP_BUILD_SCRIPT := $(NDK_PROJECT_PATH)/Android.mk
