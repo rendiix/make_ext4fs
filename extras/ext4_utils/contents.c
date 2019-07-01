@@ -18,6 +18,13 @@
 #include <string.h>
 #include <stdio.h>
 
+#include "allocate.h"
+#include "contents.h"
+#include "ext4_utils.h"
+#include "make_ext4fs.h"
+#include "extent.h"
+#include "indirect.h"
+
 #ifdef HAVE_ANDROID_OS
 #include <linux/capability.h>
 #else
@@ -27,14 +34,7 @@
 #define XATTR_SELINUX_SUFFIX "selinux"
 #define XATTR_CAPS_SUFFIX "capability"
 
-#include "ext4_utils.h"
-#include "make_ext4fs.h"
-#include "allocate.h"
-#include "contents.h"
-#include "extent.h"
-#include "indirect.h"
-
-#ifdef USE_MINGW
+#ifdef _WIN32
 #define S_IFLNK 0  /* used by make_link, not needed under mingw */
 #endif
 

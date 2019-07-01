@@ -37,10 +37,8 @@ common_includes := \
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(libselinux_src_files)
 LOCAL_MODULE := libselinux
-LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -std=gnu89 -DBUILD_HOST $(common_cflags)
 LOCAL_C_INCLUDES := $(common_includes)
-LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -51,12 +49,13 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libz
-LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := $(common_includes)
-LOCAL_CFLAGS += -DUSE_MMAP -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE=1 -DZLIB_CONST
-LOCAL_LDFLAGS += -Wl,--hash-style=both
+LOCAL_CFLAGS += -DUSE_MMAP \
+    -D_FILE_OFFSET_BITS=64 \
+    -D_LARGEFILE64_SOURCE=1 \
+    -DZLIB_CONST
+
 LOCAL_SRC_FILES := $(libz_src_files)
-LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -70,7 +69,6 @@ LOCAL_MODULE_TAGES := optional
 LOCAL_C_INCLUDES := $(common_includes)
 LOCAL_SRC_FILES := $(libsparse_src_files)
 LOCAL_STATIC_LIBRARIES := libz
-LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -95,7 +93,7 @@ LOCAL_SRC_FILES := \
 	extras/ext4_utils/canned_fs_config.c
 
 LOCAL_MODULE := make_ext4fs
-LOCAL_CFLAGS += -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE=1 -D_GNU_SOURCE -D__ANDROID__ -DHOST
+LOCAL_CFLAGS += -D_GNU_SOURCE -D__ANDROID__ -DHOST
 LOCAL_STATIC_LIBRARIES := libselinux libz libsparse
 LOCAL_C_INCLUDES := $(common_includes)
 LOCAL_MODULE_TAGS := optional
