@@ -1,5 +1,4 @@
-APP_STL := system
-APP_PLATFORM := latest
+APP_PLATFORM := android-26
 
 ifeq ($(BUILD), aarch64)
 APP_ABI := arm64-v8a
@@ -17,6 +16,10 @@ ifeq ($(BUILD), x86)
 APP_ABI := x86
 endif
 
+ifeq ($(BUILD), all)
+APP_ABI := arm64-v8a armeabi-v7a x86 x86_64
+endif
+
 ifeq ($(TOOLCHAINS), gcc)
 NDK_TOOLCHAIN_VERSION=4.9
 endif
@@ -24,5 +27,3 @@ endif
 ifeq ($(TOOLCHAINS), clang)
 NDK_TOOLCHAIN_VERSION=clang
 endif
-
-APP_BUILD_SCRIPT := Android.mk
