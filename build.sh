@@ -33,9 +33,9 @@ function HELP() {
 echo -e "Usage $0 <options>
 
 Options:
-  -a, --arch	 specify target arch i.e: <armeabi-v7a|arm64-v8a|x86|x86_64>.
-  -s, --static   build static executable binary.
-  -d, --debug	 build binary debugable.
+  -a, --arch	 build single target i.e: <armeabi-v7a|arm64-v8a|x86|x86_64>.
+  -s, --static   compile static executable binary.
+  -d, --debug	 compile with debugable binary.
   -v, --verbose  verbose compilation.
   -h, --help	 show this help message and exit."
 }
