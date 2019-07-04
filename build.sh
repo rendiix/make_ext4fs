@@ -33,12 +33,10 @@ function HELP() {
 echo -e "Usage $0 <options>
 
 Options:
-  -a, --arch	 specify target arch i.e : <armeabi-v7a|arm64-v8a|x86|x86_64>
-  -b, --build <args>
-		 do build package: <all> (to build all)
-	         <package name>(to build single package).
-  -l, --list	 show available package list and exit
-  -c, --clean
+  -a, --arch	 specify target arch i.e: <armeabi-v7a|arm64-v8a|x86|x86_64>.
+  -s, --static   build static executable binary.
+  -d, --debug	 build binary debugable.
+  -v, --verbose  verbose compilation.
   -h, --help	 show this help message and exit."
 }
 
