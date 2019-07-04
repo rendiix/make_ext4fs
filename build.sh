@@ -33,7 +33,7 @@ function HELP() {
 echo -e "Usage $0 <options>
 
 Options:
-  -a, --arch	 build single target i.e: <armeabi-v7a|arm64-v8a|x86|x86_64>.
+  -a, --arch	 build single target i.e: <arm|aarch64|x86|x86_64>.
   -s, --static   compile static executable binary.
   -d, --debug	 compile with debugable binary.
   -v, --verbose  verbose compilation.

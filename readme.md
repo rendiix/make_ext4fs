@@ -14,3 +14,15 @@
 [![Discord](https://img.shields.io/discord/404576842419273729.svg?label=join%20discord&logo=discord)](https://discord.gg/5PmKhrc)
 [![Twitter Follow](https://img.shields.io/twitter/follow/rendiix.svg?color=green&label=follow&logo=twitter&style=social)](https://twitter.com/rendiix)
 
+#### How to build
+```console
+user@localhost:~/make_ext4fs$ build.sh --help
+Usage ./build.sh <options>
+
+Options:
+  -a, --arch	 build single target i.e: <arm|aarch64|x86|x86_64>.
+  -s, --static   compile static executable binary.
+  -d, --debug	 compile with debugable binary.
+  -v, --verbose  verbose compilation.
+  -h, --help	 show this help message and exit.
+```
