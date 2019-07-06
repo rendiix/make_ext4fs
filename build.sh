@@ -20,6 +20,9 @@ if [ "$?" = 0 ]; then
 	find libs -mindepth 1 -maxdepth 1 -type d | while read -r meki
 do
 	DIR_ABI=$(basename "$meki")
+	if [ ! -d "bin" ]; then
+		mkdir bin
+		fi
 	for binary in "make_ext4fs" "img2simg" "simg2img"; do
 		cp -f "libs/${DIR_ABI}/${binary}" "bin/${binary}-android-${DIR_ABI}"
 	done
@@ -41,10 +44,6 @@ Options:
 }
 
 OPTS=`busybox getopt -o a:vsdh --long arch:,verbose,static,debug,help -n "$0" -- "$@"`
-if [ "$OPTS" = " --" ]; then
-	echo -e "Starting build with default configuration.\nTry $0 --help for information"
-	sleep 2
-fi
 eval set -- "$OPTS"
 
 OPT_DEBUG="false"
@@ -53,17 +52,13 @@ OPT_VERBOSE="0"
 OPT_STATIC="0"
 OPT_HELP="false"
 
-while true; do
-  case "$1" in
+case "$1" in
     -a | --arch ) OPT_TARGET_ARCH="$2"; shift 2;;
     -h | --help ) OPT_HELP=true; shift ;;
     -d | --debug ) OPT_DEBUG=true; shift;;
     -v | --verbose ) OPT_VERBOSE=1; shift;;
     -s | --static ) OPT_STATIC=1; shift;;
-    -- ) shift; break ;;
-    * ) break ;;
-  esac
-done
+esac
 
 case "$OPT_TARGET_ARCH" in
     arm|aarch64|x86|x86_64|all);;
