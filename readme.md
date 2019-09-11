@@ -20,9 +20,11 @@ user@localhost:~/make_ext4fs$ build.sh --help
 Usage ./build.sh <options>
 
 Options:
-  -a, --arch	 build single target i.e: <arm|aarch64|x86|x86_64>.
+  -a, --arch     build single target i.e: <arm|aarch64|x86|x86_64>.
   -s, --static   compile static executable binary.
-  -d, --debug	 compile with debugable binary.
+  -c, --compiler select compiler gcc or clang.
+  -d, --debug    compile with debugable binary.
   -v, --verbose  verbose compilation.
-  -h, --help	 show this help message and exit.
+  -h, --help     show this help message and exit.
+  -q, --quiet    build with silent stdout
 ```
