@@ -25,7 +25,7 @@ do
 		mkdir bin
 	fi
 	for binary in "make_ext4fs" "img2simg" "simg2img"; do
-		cp -f "libs/${DIR_ABI}/${binary}" "bin/${binary}-android-${DIR_ABI}"
+		cp -f "libs/${DIR_ABI}/${binary}" "bin/${binary}_android_${DIR_ABI}"
 	done
 done
 fi
@@ -36,17 +36,19 @@ function HELP() {
 echo -e "Usage $0 <options>
 
 Options:
-  -a, --arch	 build single target i.e: <arm|aarch64|x86|x86_64>.
+  -t, --target <arm|aarch64|x86|x86_64>
+  		 build single target executable  i.e: <arm|aarch64|x86|x86_64>.
+  -c, --compiler <clang|gcc>
+  		 select compiler gcc or clang.
   -s, --static   compile static executable binary.
-  -c, --compiler select compiler gcc or clang.
   -d, --debug	 compile with debugable binary.
   -v, --verbose  verbose compilation.
   -h, --help	 show this help message and exit.
   -q, --quiet    build with silent stdout"
 }
 
-OPTS=`busybox getopt -o a:c:vsdhq \
-	--long arch:,compiler:verbose,static,debug,quiet,help \
+OPTS=`busybox getopt -o t:c:vsdhq \
+	--long target:,compiler:verbose,static,debug,quiet,help \
 	-n "$0" -- "$@"`
 
 if [ "$?" -ne "0" ]; then
@@ -71,7 +73,7 @@ To see more options:
 
 while true; do
 	case "$1" in
-		-a | --arch ) OPT_TARGET_ARCH="$2"; shift;;
+		-t | --target ) OPT_TARGET_ARCH="$2"; shift;;
 		-c | --compiler ) 
 			if [[ "$2" -ne "clang" || "$2" -ne "gcc" ]]; then
 				echo "$2 is not valid compiler, use gcc or clang"
