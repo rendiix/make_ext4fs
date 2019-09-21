@@ -24,7 +24,7 @@ do
 	if [ ! -d "bin" ]; then
 		mkdir bin
 	fi
-	for binary in "make_ext4fs" "img2simg" "simg2img"; do
+	for binary in "make_ext4fs" "img2simg" "simg2img" "sefcontext_decompile"; do
 		cp -f "libs/${DIR_ABI}/${binary}" "bin/${binary}_android_${DIR_ABI}"
 	done
 done
@@ -36,7 +36,7 @@ function HELP() {
 echo -e "Usage $0 <options>
 
 Options:
-  -t, --target <arm|aarch64|x86|x86_64>
+  -t, --target <arm|arm64|x86|x86_64>
   		 build single target executable  i.e: <arm|aarch64|x86|x86_64>.
   -c, --compiler <clang|gcc>
   		 select compiler gcc or clang.
@@ -105,7 +105,7 @@ function info() {
 	}
 
 case "$OPT_TARGET_ARCH" in
-    arm|aarch64|x86|x86_64|all);;
+    arm|arm64|x86|x86_64|all);;
     *)
 	    echo "unknown arch $OPT_TARGET_ARCH";
 	    exit 1 ;;

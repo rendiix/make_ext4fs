@@ -1,6 +1,6 @@
-APP_PLATFORM := android-26
+APP_PLATFORM := android-28
 
-ifeq ($(BUILD), aarch64)
+ifeq ($(BUILD), arm64)
 APP_ABI := arm64-v8a
 endif
 

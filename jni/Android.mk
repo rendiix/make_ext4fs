@@ -131,7 +131,9 @@ LOCAL_SRC_FILES := \
 	../src/core/libsparse/sparse_crc32.c
 
 LOCAL_MODULE := simg2img
-LOCAL_CFLAGS := $(common_cflags)
+LOCAL_CFLAGS := $(common_cflags) \
+	-std=c11
+
 LOCAL_STATIC_LIBRARIES := libz libsparse
 LOCAL_C_INCLUDES := $(common_includes)
 LOCAL_MODULE_TAGS := optional
@@ -154,6 +156,24 @@ LOCAL_CFLAGS := $(common_cflags)
 LOCAL_STATIC_LIBRARIES := libz libsparse
 LOCAL_C_INCLUDES := $(common_includes)
 LOCAL_MODULE_TAGS := optional
+ifeq ($(STATIC), 1)
+LOCAL_LDFLAGS := -static
+endif
+
+include $(BUILD_EXECUTABLE)
+
+##
+# sefcontext_decompile
+#
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	../src/sefcontext_decompile/sefcontext_decompile.cpp
+
+LOCAL_MODULE := sefcontext_decompile
+LOCAL_CPPFLAGS := $(common_cflags) -std=c++11
+
 ifeq ($(STATIC), 1)
 LOCAL_LDFLAGS := -static
 endif
