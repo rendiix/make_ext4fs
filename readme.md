@@ -15,6 +15,9 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/rendiix.svg?color=green&label=follow&logo=twitter&style=social)](https://twitter.com/rendiix)
 
 #### How to build
+
+>Make sure the NDK android is installed
+
 ```console
 user@localhost:~/make_ext4fs$ build.sh --help
 Usage ./build.sh <options>
