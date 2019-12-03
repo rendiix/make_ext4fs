@@ -31,3 +31,15 @@ Options:
   -h, --help     show this help message and exit.
   -q, --quiet    build with silent stdout
 ```
+#### 
+
+```console
+./make_ext4fs_android_arm64-v8a
+Expected filename after options
+make_ext4fs_android_arm64-v8a [ -l <len> ] [ -j <journal size> ] [ -b <block_size> ]
+    [ -g <blocks per group> ] [ -i <inodes> ] [ -I <inode size> ]
+    [ -L <label> ] [ -f ] [ -a <android mountpoint> ]
+    [ -S file_contexts ] [ -C fs_config ] [ -T timestamp ]
+    [ -z | -s ] [ -w ] [ -c ] [ -J ] [ -v ] [ -B <block_list_file> ]
+    <filename> [<directory>]
+```
