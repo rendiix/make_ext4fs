@@ -44,68 +44,20 @@ make_ext4fs_android_arm64-v8a [ -l <len> ] [ -j <journal size> ] [ -b <block_siz
     <filename> [<directory>]
 
 user@localhost:~/make_ext4fs$ file bin/*
-img2simg_android_arm64-v8a:               ELF 64-bit LSB shared object,
- ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker64, BuildID[sha1]=4a0914b8ff1c7f6563f1fcbc95a824b70d39fca4,
-stripped
-img2simg_android_armeabi-v7a:             ELF 32-bit LSB shared object,
- ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/b
-in/linker, BuildID[sha1]=ba8b4822d562d0fbfcf76402c9180cc37cbde6f4, stri
-pped
-img2simg_android_x86:                     ELF 32-bit LSB shared object,
- Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker, BuildID[sha1]=f811a702cd46a4ae0d69780c2fe90d05fe634476, st
-ripped
-img2simg_android_x86_64:                  ELF 64-bit LSB shared object,
- x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/
-linker64, BuildID[sha1]=81f7f27494b673e6039fac23fd1b0b833f7ece88, strip
-ped
-make_ext4fs_android_arm64-v8a:            ELF 64-bit LSB shared object,
- ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker64, BuildID[sha1]=448be26434b14135733105a1494611625e9c8524,
-stripped
-make_ext4fs_android_armeabi-v7a:          ELF 32-bit LSB shared object,
- ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/b
-in/linker, BuildID[sha1]=d0e65b8bf9fe139790d00a4f201f84fb4c713054, stri
-pped
-make_ext4fs_android_x86:                  ELF 32-bit LSB shared object,
- Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker, BuildID[sha1]=c03e941f31285551fa537b4d4697612dbf8ed393, st
-ripped
-make_ext4fs_android_x86_64:               ELF 64-bit LSB shared object,
- x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/
-linker64, BuildID[sha1]=eb4b19bbb67379aef883fa3471e918fe16c61b5f, strip
-ped
-sefcontext_decompile_android_arm64-v8a:   ELF 64-bit LSB shared object,
- ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker64, BuildID[sha1]=7b04f766a0c4b58febeb08405d2657ab18f2a5c5,
-stripped
-sefcontext_decompile_android_armeabi-v7a: ELF 32-bit LSB shared object,
- ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/b
-in/linker, BuildID[sha1]=4d823768f4bb325aa461d1dc710997db4f5c571c, stri
-pped
-sefcontext_decompile_android_x86:         ELF 32-bit LSB shared object,
- Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker, BuildID[sha1]=6be90443174c92123d72e01b02fba930f0d6772a, st
-ripped
-sefcontext_decompile_android_x86_64:      ELF 64-bit LSB shared object,
- x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/
-linker64, BuildID[sha1]=176df06e06f65c9dde1c030992a6d725c0a4daea, strip
-ped
-simg2img_android_arm64-v8a:               ELF 64-bit LSB shared object,
- ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker64, BuildID[sha1]=1db907b8d878e925e9323992313501f249926b30,
-stripped
-simg2img_android_armeabi-v7a:             ELF 32-bit LSB shared object,
- ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/b
-in/linker, BuildID[sha1]=787e54731af077392b5575b72794b8431336e23a, stri
-pped
-simg2img_android_x86:                     ELF 32-bit LSB shared object,
- Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system
-/bin/linker, BuildID[sha1]=3795a7c04d57740f7b79670a6ea375e300a6ff09, st
-ripped
-simg2img_android_x86_64:                  ELF 64-bit LSB shared object,
- x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/
-linker64, BuildID[sha1]=41bec9d211e7852deca7901ade2bbd9589561ffb, strip
-ped
+bin/img2simg_android_arm64-v8a:               ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=4a0914b8ff1c7f6563f1fcbc95a824b70d39fca4, stripped
+bin/img2simg_android_armeabi-v7a:             ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=ba8b4822d562d0fbfcf76402c9180cc37cbde6f4, stripped
+bin/img2simg_android_x86:                     ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=f811a702cd46a4ae0d69780c2fe90d05fe634476, stripped
+bin/img2simg_android_x86_64:                  ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=81f7f27494b673e6039fac23fd1b0b833f7ece88, stripped
+bin/make_ext4fs_android_arm64-v8a:            ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=448be26434b14135733105a1494611625e9c8524, stripped
+bin/make_ext4fs_android_armeabi-v7a:          ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=d0e65b8bf9fe139790d00a4f201f84fb4c713054, stripped
+bin/make_ext4fs_android_x86:                  ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=c03e941f31285551fa537b4d4697612dbf8ed393, stripped
+bin/make_ext4fs_android_x86_64:               ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=eb4b19bbb67379aef883fa3471e918fe16c61b5f, stripped
+bin/sefcontext_decompile_android_arm64-v8a:   ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=7b04f766a0c4b58febeb08405d2657ab18f2a5c5, stripped
+bin/sefcontext_decompile_android_armeabi-v7a: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=4d823768f4bb325aa461d1dc710997db4f5c571c, stripped
+bin/sefcontext_decompile_android_x86:         ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=6be90443174c92123d72e01b02fba930f0d6772a, stripped
+bin/sefcontext_decompile_android_x86_64:      ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=176df06e06f65c9dde1c030992a6d725c0a4daea, stripped
+bin/simg2img_android_arm64-v8a:               ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=1db907b8d878e925e9323992313501f249926b30, stripped
+bin/simg2img_android_armeabi-v7a:             ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=787e54731af077392b5575b72794b8431336e23a, stripped
+bin/simg2img_android_x86:                     ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, BuildID[sha1]=3795a7c04d57740f7b79670a6ea375e300a6ff09, stripped
+bin/simg2img_android_x86_64:                  ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, BuildID[sha1]=41bec9d211e7852deca7901ade2bbd9589561ffb, stripped
 ```
