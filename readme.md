@@ -1,5 +1,6 @@
 [![GitHub](https://img.shields.io/github/license/rendiix/make_ext4fs.svg)](https://github.com/rendiix/make_ext4fs/blob/master/LICENSE)
 [![HitCount](http://hits.dwyl.io/rendiix/make_ext4fs.svg)](http://github.com/rendiix/make_ext4fs)
+[![GitHub release](https://img.shields.io/github/release/rendiix/make_ext4fs.svg)](https://GitHub.com/rendiix/make_ext4fs/releases/)
 [![Github all releases](https://img.shields.io/github/downloads/rendiix/make_ext4fs/total.svg)](https://GitHub.com/rendiix/make_ext4fs/releases/)
 [![GitHub forks](https://img.shields.io/github/forks/rendiix/make_ext4fs.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rendiix/make_ext4fs/network/)
 [![GitHub stars](https://img.shields.io/github/stars/rendiix/make_ext4fs.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/rendiix/make_ext4fs/stargazers/)
