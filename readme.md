@@ -9,7 +9,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/rendiix/make_ext4fs.svg)](https://GitHub.com/rendiix/make_ext4fs/graphs/contributors/)
 
 # make_ext4fs for android
-## make_ext4fs img2simg simg2img sefcontext_decompile
+## termux make_ext4fs img2simg simg2img sefcontext_decompile
 
 #### Join Discord or follow me on Twitter:
 
